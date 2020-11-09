@@ -1,5 +1,4 @@
 import time
-from docx2pdf import convert
 from selenium import webdriver
 
 options = webdriver.ChromeOptions()

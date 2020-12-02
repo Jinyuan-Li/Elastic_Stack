@@ -3,7 +3,9 @@ from elasticsearch import Elasticsearch
 
 index = 'kibana_sample_data_ecommerce'
 es = Elasticsearch(hosts="http://192.168.43.89:9200/", http_auth=('A/C','PWD'))
-query_json = {}
+query_json = {
+    # "_source": [ "ip", "machine" ]
+}
 
 # size = 5
 size = es.search(index=index, body=query_json)['hits']['total']['value']
